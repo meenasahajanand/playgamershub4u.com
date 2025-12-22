@@ -1,0 +1,101 @@
+@font-face {
+    font-family: iconfont;
+    src: url(iconfont7e20.eot?t=1673249927261);
+    src: url(iconfont7e20.eot?t=1673249927261#iefix) format('embedded-opentype'),url(iconfont7e20.woff2?t=1673249927261) format('woff2');
+}
+
+.iconfont {
+    font-family: iconfont!important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-homefill:before {
+    content: "\e6bb"
+}
+
+.icon-Requirements:before {
+    content: "\e702"
+}
+
+.icon-Category:before {
+    content: "\e703"
+}
+
+.icon-a-Suitableforage:before {
+    content: "\e704"
+}
+
+.icon-Version:before {
+    content: "\e705"
+}
+
+.icon-a-UpdatedTime:before {
+    content: "\e706"
+}
+
+.icon-a-AppPackage:before {
+    content: "\e707"
+}
+
+.icon-a-Availableon:before {
+    content: "\e708"
+}
+
+.icon-Developer:before {
+    content: "\e709"
+}
+
+.icon-sousuo:before {
+    content: "\e668"
+}
+
+.icon-More:before {
+    content: "\e667"
+}
+
+.icon-zuo:before {
+    content: "\e666"
+}
+
+.icon-you:before {
+    content: "\e665"
+}
+
+.icon-anquan:before {
+    content: "\e664"
+}
+
+.icon-a-GooglePlaylogo:before {
+    content: "\e663"
+}
+
+.icon-apple:before {
+    content: "\e662"
+}
+
+.icon-xiangxiajiantou:before {
+    content: "\e661"
+}
+
+.icon-xiangshangjiantou:before {
+    content: "\e660"
+}
+
+.icon-xiangyoujiantou:before {
+    content: "\e65f"
+}
+
+.icon-zan:before {
+    content: "\e65e"
+}
+
+.icon-cai:before {
+    content: "\e65d"
+}
+
+.icon-fanhuidingbu:before {
+    content: "\e65c"
+}
