@@ -1446,8 +1446,27 @@
 <script src="../cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 <script>
     //图片懒加载
-    var lazyLoadImg = document.querySelectorAll(".lazyload");
+    var lazyLoadImg = document.querySelectorAll(".lazyLoad");
+
+    // 为所有懒加载图片添加错误处理
+    lazyLoadImg.forEach(function(img) {
+        img.onerror = function() {
+            this.src = 'dist/www/img/imageDefault.png';
+            this.onerror = null; // 防止无限循环
+        };
+    });
+
     lazyload(lazyLoadImg);
+
+    // 图片加载失败时使用默认图片（全局错误处理）
+    document.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG' && e.target.classList.contains('lazyLoad')) {
+            if (e.target.src && !e.target.src.includes('imageDefault.png')) {
+                e.target.src = 'dist/www/img/imageDefault.png';
+                e.target.onerror = null; // 防止无限循环
+            }
+        }
+    }, true);
 
     window.addEventListener("load", function(){
         window.cookieconsent.initialise({
