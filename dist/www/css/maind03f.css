@@ -4537,6 +4537,11 @@ footer {
     /* Game Detail Pages Mobile Fixes */
     .detail {
         padding: 0 15px;
+        margin-bottom: 20px;
+    }
+    
+    .detail .container {
+        padding-bottom: 20px;
     }
     
     .detail .crumbs {
@@ -4661,6 +4666,177 @@ footer {
     
     .detail .boxes .LBox .gameTop .gameDetail .show_main li:nth-child(-n+4) {
         width: 100%;
+    }
+    
+    /* Game Detail Buttons (Android/iOS toggle) */
+    .detail .boxes .LBox .gameTop .gameDetail .btns {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .detail .boxes .LBox .gameTop .gameDetail .btns .btn {
+        flex: 1;
+        min-width: calc(50% - 5px);
+        padding: 10px 15px;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .detail .boxes .LBox .gameTop .gameDetail .show_main ul {
+        width: 100%;
+    }
+    
+    .detail .boxes .LBox .gameTop .gameDetail .show_main ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .detail .boxes .LBox .gameTop .gameDetail .show_main ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .detail .boxes .LBox .gameTop .gameDetail .show_main ul li h4 {
+        font-size: 13px;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    
+    .detail .boxes .LBox .gameTop .gameDetail .show_main ul li p {
+        font-size: 13px;
+        width: 100%;
+        word-wrap: break-word;
+    }
+    
+    /* Screenshot Swiper Section */
+    .detail .boxes .LBox .swiper_con {
+        margin-top: 20px;
+        padding: 0 15px;
+        position: relative;
+    }
+    
+    .detail .boxes .LBox .swiper_con>h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .detail .boxes .LBox .swiper_con .preview {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 10px;
+        overflow: hidden;
+    }
+    
+    .detail .boxes .LBox .swiper_con .preview .swiper-wrapper {
+        display: flex;
+        align-items: stretch;
+    }
+    
+    .detail .boxes .LBox .swiper_con .preview .swiper-slide {
+        width: 280px !important;
+        min-width: 280px;
+        max-width: 280px;
+        height: auto;
+        flex-shrink: 0;
+        display: flex;
+    }
+    
+    .detail .boxes .LBox .swiper_con .preview .swiper-slide img {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+    }
+    
+    .detail .boxes .LBox .swiper_con .sw_btn {
+        position: relative;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .detail .boxes .LBox .swiper_con .sw_btn .swiper-button-p1,
+    .detail .boxes .LBox .swiper_con .sw_btn .swiper-button-n1 {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .detail .boxes .LBox .swiper_con .sw_btn .swiper-button-p1>.iconfont,
+    .detail .boxes .LBox .swiper_con .sw_btn .swiper-button-n1>.iconfont {
+        font-size: 16px;
+        color: #333;
+    }
+    
+    /* Get App Section */
+    .detail .boxes .LBox .get {
+        margin-top: 20px;
+        padding: 15px;
+    }
+    
+    .detail .boxes .LBox .get>h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .detail .boxes .LBox .get .get_list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .detail .boxes .LBox .get .get_list>li {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .detail .boxes .LBox .get .get_list>li>a {
+        width: 100%;
+        padding: 15px;
+        display: block;
+    }
+    
+    .detail .boxes .LBox .get .get_list>li>a>p:first-child {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .detail .boxes .LBox .get .get_list>li>a>p:last-child {
+        font-size: 12px;
+    }
+    
+    /* Ad Box Mobile */
+    .detail .boxes .LBox .ad_box {
+        width: 100%;
+        margin: 20px 0;
+        padding: 0 15px;
+    }
+    
+    .detail .boxes .LBox .ad_box .ad-slot {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .detail .boxes .LBox .ad_box>p {
+        font-size: 12px;
+        margin-top: 10px;
     }
     
     /* Name Top Section */
@@ -4796,6 +4972,46 @@ footer {
         margin-top: 0;
     }
     
+    .detail .similar .similar_list>li>a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .detail .similar .similar_list>li>a>.thumb {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    
+    .detail .similar .similar_list>li>a>.thumb>img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .detail .similar .similar_list>li>a>p {
+        font-size: 12px;
+        margin-top: 8px;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        word-wrap: break-word;
+        line-height: 1.4;
+        max-height: 2.8em;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-align: center;
+    }
+    
     /* Online/Iframe Section */
     .detail .online>h2 {
         font-size: 20px;
@@ -4842,6 +5058,11 @@ footer {
     }
     
     /* Right Box (Sidebar) */
+    .detail .boxes .RBox {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
     .detail .boxes .RBox .Adbox {
         width: 100%;
         margin-top: 15px;
@@ -4852,13 +5073,39 @@ footer {
     }
     
     .detail .boxes .RBox .game_main>h2 {
-        font-size: 16px;
-        height: 45px;
-        line-height: 45px;
+        font-size: 18px;
+        height: auto;
+        line-height: 1.4;
+        padding: 10px 0;
+        margin-bottom: 15px;
     }
     
     .detail .boxes .RBox .game_main .game_list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        margin-top: 15px;
         padding: 10px;
+        padding-bottom: 15px;
+        touch-action: pan-x pinch-zoom;
+        cursor: grab;
+        scroll-behavior: smooth;
+    }
+    
+    .detail .boxes .RBox .game_main .game_list:active {
+        cursor: grabbing;
+    }
+    
+    .detail .boxes .RBox .game_main .game_list::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .detail .boxes .RBox .game_main .game_list::-webkit-scrollbar-thumb {
+        background: #04c181;
+        border-radius: 2px;
     }
     
     .detail .boxes .RBox .game_main .game_list>li {
@@ -4868,6 +5115,61 @@ footer {
         margin-right: 12px;
         margin-top: 0;
         flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+    
+    .detail .boxes .RBox .game_main .game_list>li>a {
+        padding: 15px 12px 10px;
+        width: 100%;
+        display: block;
+    }
+    
+    .detail .boxes .RBox .game_main .game_list>li>a .thum {
+        width: 100%;
+        height: 120px;
+        max-width: 120px;
+        margin: 0 auto;
+    }
+    
+    .detail .boxes .RBox .game_main .game_list>li>a .thum>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .detail .boxes .RBox .game_main .game_list>li>a>dl {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .detail .boxes .RBox .game_main .game_list>li>a>dl>dt {
+        font-size: 13px;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        word-wrap: break-word;
+        line-height: 1.4;
+        max-height: 2.8em;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    .detail .boxes .RBox .game_main .game_list>li>a>dl>dd {
+        font-size: 12px;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        line-height: 1.3;
+        margin-top: 4px;
+        text-align: center;
+    }
+    
+    .detail .boxes .RBox .game_main .game_list>li>a>dl>dd:first-of-type {
+        margin-top: 0;
     }
     
     .detail .boxes .RBox .game_main .game_list>li:nth-child(7n) {
@@ -4921,5 +5223,75 @@ footer {
     .detail .tags .tags_list>li>a {
         padding: 8px 16px;
         font-size: 13px;
+    }
+    
+    /* Footer Mobile Fixes */
+    footer {
+        margin-top: 40px;
+        padding: 20px 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    footer .footer_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-bottom: 15px;
+        justify-content: center;
+    }
+    
+    footer .footer_list>li {
+        width: calc(50% - 5px);
+        margin-right: 0;
+        flex: 0 0 calc(50% - 5px);
+    }
+    
+    footer .footer_list>li>a {
+        width: 100%;
+        padding: 10px;
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+    
+    footer .footer_list>li:nth-child(6n) {
+        margin-right: 0;
+    }
+    
+    footer nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+        gap: 10px;
+    }
+    
+    footer nav>a {
+        margin: 5px 8px;
+        font-size: 13px;
+        padding: 8px 12px;
+        white-space: nowrap;
+    }
+    
+    footer>p {
+        font-size: 12px;
+        margin-top: 15px;
+        padding: 0 10px;
+        line-height: 1.6;
+        word-wrap: break-word;
+    }
+    
+    /* Top Button Mobile */
+    .top_lea {
+        width: 45px;
+        height: 45px;
+        right: 10px;
+        bottom: 100px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .top_lea .iconfont {
+        font-size: 18px;
     }
 }

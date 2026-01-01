@@ -117,6 +117,59 @@ if ($(".preview1").length > 0) {
         },
     })
 }
+
+// Screenshot Swiper for Game Detail Pages
+if ($(".preview").length > 0 && $(".preview").not(".preview1").length > 0) {
+    var screenshotSwiper = new Swiper('.preview', {
+        slidesPerView: 'auto',
+        slidesPerGroup: 1,
+        spaceBetween: 15,
+        watchSlidesVisibility: true,
+        observer: true,
+        observeSlideChildren: true,
+        observeParents: true,
+        // Touch/Swipe settings
+        touchEventsTarget: 'container',
+        allowTouchMove: true,
+        touchRatio: 1,
+        touchAngle: 45,
+        simulateTouch: true,
+        grabCursor: true,
+        freeMode: true,
+        freeModeMomentum: true,
+        freeModeMomentumRatio: 0.5,
+        freeModeMomentumVelocityRatio: 0.5,
+        freeModeSticky: false,
+        resistance: true,
+        resistanceRatio: 0.85,
+        // Responsive breakpoints
+        breakpoints: {
+            320: {
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,
+                spaceBetween: 15,
+                freeMode: true,
+            },
+            768: {
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                spaceBetween: 20,
+                freeMode: false,
+            },
+            1024: {
+                slidesPerView: 3,
+                slidesPerGroup: 1,
+                spaceBetween: 25,
+            }
+        },
+        // Navigation
+        navigation: {
+            nextEl: '.swiper-button-n1',
+            prevEl: '.swiper-button-p1',
+        },
+    });
+}
+
 //回到顶部按钮
 var backTop = document.querySelector('.top_lea');
 document.addEventListener('scroll', function() {
@@ -208,6 +261,12 @@ backTop.addEventListener('click', function() {
         // Similar games lists (game detail pages)
         const similarLists = document.querySelectorAll('.detail .similar .similar_list');
         similarLists.forEach(function(list) {
+            enableDragScroll(list);
+        });
+        
+        // RBox game lists (Hot Games section in game detail pages)
+        const rboxGameLists = document.querySelectorAll('.detail .boxes .RBox .game_main .game_list');
+        rboxGameLists.forEach(function(list) {
             enableDragScroll(list);
         });
     });
