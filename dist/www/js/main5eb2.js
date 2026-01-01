@@ -1,6 +1,53 @@
 //图片lazy 加载
 $(document).ready(function() {
-    $("img.lazyLoad").lazyload();
+    // Fix lazyLoad class name (some use lazyLoad, some use lazyload)
+    $("img.lazyLoad, img.lazyload").each(function() {
+        $(this).addClass('lazyload');
+    });
+    
+    // Handle category images separately - check if they exist before loading
+    $('.category_list .thum img').each(function() {
+        var $img = $(this);
+        var $thum = $img.closest('.thum');
+        var dataSrc = $img.attr('data-src');
+        
+        if (dataSrc) {
+            // Check if image exists before loading
+            var testImg = new Image();
+            testImg.onload = function() {
+                // Image exists, load it
+                $img.attr('src', dataSrc).removeClass('lazyload lazyLoad');
+                $img.css('opacity', '1');
+            };
+            testImg.onerror = function() {
+                // Image doesn't exist, hide img and show fallback
+                $img.hide();
+                $img.css('opacity', '0');
+                // Ensure gradient background is visible
+                $thum.css({
+                    'background-size': 'cover',
+                    'background-position': 'center'
+                });
+            };
+            // Start loading check
+            testImg.src = dataSrc;
+        } else {
+            // No data-src, hide image and show fallback
+            $img.hide();
+        }
+    });
+    
+    // Regular lazy loading for other images (not category images)
+    $("img.lazyload").not('.category_list .thum img').lazyload({
+        threshold: 0,
+        effect: "fadeIn",
+        effect_speed: 300
+    });
+    
+    // Handle errors for other images
+    $("img.lazyload").not('.category_list .thum img').on('error', function() {
+        $(this).hide();
+    });
 });
 //点击出现搜索框
 var search_btn = document.getElementById('search_btn');
