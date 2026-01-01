@@ -406,15 +406,11 @@
     </div>
     <div class="box_r">
         <h2>RPG</h2>
-        <div class="ad">
-           <!-- /23330730517/playgamershub4u.com_d1 -->
-            <div id='div-gpt-ad-1766492601819-0' style='min-width: 970px; min-height: 90px;'>
-                <script>
-                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1766492601819-0'); });
-                </script>
-            </div>
-            <p>Advertisement</p>
-        </div>
+        <!-- div 1  -->
+<div class="ad_box">
+    <div id="div-gpt-ad-1766492601819-0" class="ad-slot"></div>
+    <p>Advertisement</p>
+</div>
         <div class="gameBox">
             <ul class="game_list">
                                 <li>
@@ -907,15 +903,11 @@
             </ul>
         </div>
         
-        <div class="ad">
-           <!-- /23330730517/playgamershub4u.com_d2-->
-            <div id='div-gpt-ad-1766492646261-0' style='min-width: 800px; min-height: 300px;'>
-                <script>
-                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1766492646261-0'); });
-                </script>
-            </div>
-            <p>Advertisement</p>
-        </div>
+       <!-- div 2  -->
+<div class="ad_box">
+    <div id="div-gpt-ad-1766492646261-0" class="ad-slot"></div>
+    <p>Advertisement</p>
+</div>
     </div>
 </div>
 <div class="main">
@@ -1241,7 +1233,48 @@
         })});
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
 
+        const adIds = [
+            'div-gpt-ad-1766492601819-0', // D1
+            'div-gpt-ad-1766492646261-0', // D2
+            'div-gpt-ad-1766492699832-0'  // D3
+        ];
+
+        let isOverAd = false;
+
+        adIds.forEach(function (id) {
+            const adEl = document.getElementById(id);
+            if (!adEl) return;
+
+            adEl.addEventListener('mouseenter', function () {
+                isOverAd = true;
+            });
+
+            adEl.addEventListener('mouseleave', function () {
+                isOverAd = false;
+            });
+        });
+
+        window.addEventListener('blur', function () {
+            if (isOverAd) {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    event: 'detail_ck'
+                });
+            }
+        });
+
+    });
+</script>
+<script>
+    googletag.cmd.push(function () {
+        googletag.display('div-gpt-ad-1766492601819-0');
+        googletag.display('div-gpt-ad-1766492646261-0');
+        googletag.display('div-gpt-ad-1766492699832-0');
+    });
+</script>
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"66b2302918264c0595f86083a554a1d3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>

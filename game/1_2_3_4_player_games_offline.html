@@ -58,31 +58,86 @@
     })
 </script>
 
-   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+ <!-- Google GPT -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+
     <script>
-        window.googletag = window.googletag || {cmd: []};
-        googletag.cmd.push(function() {
-            googletag.defineSlot('/23330730517/playgamershub4u.com_d1', [336, 280], 'div-gpt-ad-1766492601819-0').addService(googletag.pubads());
-            googletag.pubads().collapseEmptyDivs();
+        window.googletag = window.googletag || { cmd: [] };
+
+        googletag.cmd.push(function () {
+
+            /* Responsive Size Mapping */
+            var mapping = googletag.sizeMapping()
+                .addSize([1024, 0], [[970, 250], [970, 90], [728, 90]])
+                .addSize([768, 0], [[728, 90], [300, 250]])
+                .addSize([0, 0], [[300, 250], [320, 480]])
+                .build();
+
+            function defineAd(path, id) {
+                googletag.defineSlot(
+                    path,
+                    [[970, 250], [970, 90], [728, 90], [300, 250], [320, 480]],
+                    id
+                ).defineSizeMapping(mapping)
+                    .addService(googletag.pubads());
+            }
+
+            /* Ad Slots */
+            defineAd('/23330730517/playgamershub4u.com_d1', 'div-gpt-ad-1766492601819-0');
+            defineAd('/23330730517/playgamershub4u.com_d2', 'div-gpt-ad-1766492646261-0');
+            defineAd('/23330730517/playgamershub4u.com_d3', 'div-gpt-ad-1766492699832-0');
+
+            /* Lazy Load */
+            googletag.pubads().enableLazyLoad({
+                fetchMarginPercent: 400,
+                renderMarginPercent: 200,
+                mobileScaling: 2
+            });
+
+            googletag.pubads().enableSingleRequest();
             googletag.enableServices();
         });
     </script>
-    <script>
-        window.googletag = window.googletag || {cmd: []};
-        googletag.cmd.push(function() {
-            googletag.defineSlot('/23330730517/playgamershub4u.com_d2', [800, 300], 'div-gpt-ad-1766492646261-0').addService(googletag.pubads());
-            googletag.pubads().collapseEmptyDivs();
-            googletag.enableServices();
-        });
-    </script>
-    <script>
-       window.googletag = window.googletag || {cmd: []};
-       googletag.cmd.push(function() {
-          googletag.defineSlot('/23330730517/playgamershub4u.com_d3', [300, 600], 'div-gpt-ad-1766492699832-0').addService(googletag.pubads());
-           googletag.pubads().collapseEmptyDivs();
-          googletag.enableServices();
-        });
-   </script>
+
+    <style>
+        /* ================= ADS CSS ================= */
+
+        .ad_box {
+            width: 100% !important;
+            text-align: center;
+            margin: 18px auto;
+        }
+
+        /* AD CONTAINER */
+        .ad-slot {
+            width: 100% !important;
+            margin: 0 auto;
+            min-height: 250px;
+            /* REQUIRED for lazy load */
+        }
+
+        /* Desktop */
+        @media (min-width:1024px) {
+            .ad-slot {
+                min-height: 90px;
+            }
+        }
+
+        /* Tablet */
+        @media (min-width:768px) and (max-width:1023px) {
+            .ad-slot {
+                min-height: 90px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width:767px) {
+            .ad-slot {
+                min-height: 250px;
+            }
+        }
+    </style>
+
 
 
     <style>
@@ -248,17 +303,11 @@
                     </script>
                 </div>
 
-                <div class="Adbox">
-                    <div class="ad">
-                        <!-- /23330730517/playgamershub4u.com_d1 -->
-                        <div id='div-gpt-ad-1766492601819-0' style='min-width: 336px; min-height: 280px;'>
-                            <script>
-                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1766492601819-0'); });
-                            </script>
-                        </div>
-                        <p>Advertisement</p>
-                    </div>
-                </div>
+                <!-- div 1  -->
+            <div class="ad_box">
+                <div id="div-gpt-ad-1766492601819-0" class="ad-slot"></div>
+                <p>Advertisement</p>
+            </div>
             </div>
 
             <div class="swiper_con">
@@ -309,23 +358,9 @@
                     </li>
                                     </ul>
             </div>
-             <div class="ad">
-                <!-- /23330730517/playgamershub4u.com_d2 -->
-               <div id='div-gpt-ad-1766492646261-0' style='min-width: 800px; min-height: 300px;'>
-                   <script>
-                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1766492646261-0'); });
-                    </script>
-                </div>
-                <!-- body_800X300_1 -->
-                <ins class="adsbygoogle ad001"
-                     style="display:block"
-                     data-ad-client="ca-pub-1766492646261"
-                     data-ad-slot="8947720298"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+               <!-- div 2  -->
+            <div class="ad_box">
+                <div id="div-gpt-ad-1766492646261-0" class="ad-slot"></div>
                 <p>Advertisement</p>
             </div>
 
@@ -605,13 +640,9 @@
                     </li>
                                     </ul>
             </div>
-            <div class="ad">
-                 <!-- /23330730517/playgamershub4u.com_d3 -->
-                <div id='div-gpt-ad-1766492699832-0' style='min-width: 300px; min-height: 600px;'>
-                    <script>
-                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1766492699832-0'); });
-                    </script>
-                </div>
+             <!-- div 3 -->
+            <div class="ad_box">
+                <div id="div-gpt-ad-1766492699832-0" class="ad-slot"></div>
                 <p>Advertisement</p>
             </div>
         </div>
@@ -799,6 +830,93 @@
     function reduce() {
         $('#apkBox').removeClass('active')
     }
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const adIds = [
+            'div-gpt-ad-1766492601819-0', // D1
+            'div-gpt-ad-1766492646261-0', // D2
+            'div-gpt-ad-1766492699832-0'  // D3
+        ];
+
+        let isOverAd = false;
+
+        adIds.forEach(function (id) {
+            const adEl = document.getElementById(id);
+            if (!adEl) return;
+
+            adEl.addEventListener('mouseenter', function () {
+                isOverAd = true;
+            });
+
+            adEl.addEventListener('mouseleave', function () {
+                isOverAd = false;
+            });
+        });
+
+        window.addEventListener('blur', function () {
+            if (isOverAd) {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    event: 'detail_ck'
+                });
+            }
+        });
+
+    });
+</script>
+<script>
+    googletag.cmd.push(function () {
+        googletag.display('div-gpt-ad-1766492601819-0');
+        googletag.display('div-gpt-ad-1766492646261-0');
+        googletag.display('div-gpt-ad-1766492699832-0');
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const adIds = [
+            'div-gpt-ad-1766492601819-0', // D1
+            'div-gpt-ad-1766492646261-0', // D2
+            'div-gpt-ad-1766492699832-0'  // D3
+        ];
+
+        let isOverAd = false;
+
+        adIds.forEach(function (id) {
+            const adEl = document.getElementById(id);
+            if (!adEl) return;
+
+            adEl.addEventListener('mouseenter', function () {
+                isOverAd = true;
+            });
+
+            adEl.addEventListener('mouseleave', function () {
+                isOverAd = false;
+            });
+        });
+
+        window.addEventListener('blur', function () {
+            if (isOverAd) {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    event: 'detail_ck'
+                });
+            }
+        });
+
+    });
+</script>
+<script>
+    googletag.cmd.push(function () {
+        googletag.display('div-gpt-ad-1766492601819-0');
+        googletag.display('div-gpt-ad-1766492646261-0');
+        googletag.display('div-gpt-ad-1766492699832-0');
+    });
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"66b2302918264c0595f86083a554a1d3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"66b2302918264c0595f86083a554a1d3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
