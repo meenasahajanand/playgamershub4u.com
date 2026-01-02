@@ -3945,12 +3945,48 @@ footer {
     }
     
     /* Header mobile adjustments */
+    /* Header Mobile Fixes */
+    header {
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid #eee;
+    }
+    
     header .container {
         padding: 0 15px;
+        height: 60px;
+        min-height: 60px;
+        max-height: 60px;
+    }
+    
+    /* Logo Mobile Fixes */
+    header .container .logo_img {
+        display: inline-block;
+        height: 40px;
+        min-height: 40px;
+        max-height: 40px;
+        width: auto;
+        flex-shrink: 0;
+        margin-right: 10px;
+        line-height: 0;
+    }
+    
+    header .container .logo_img>img {
+        width: auto;
+        height: 40px;
+        max-height: 40px;
+        max-width: 200px;
+        object-fit: contain;
+        object-position: left center;
+        display: block;
     }
     
     header .hea_l {
-        width: calc(100% - 120px);
+        width: calc(100% - 150px);
+        min-width: 0;
     }
     
     header .hea_l .nav_head {
@@ -3977,10 +4013,38 @@ footer {
         white-space: nowrap;
         flex-shrink: 0;
         scroll-snap-align: start;
+        color: #333;
+        font-weight: 500;
+    }
+    
+    header .hea_l .nav_head nav>a:hover {
+        background: #f1f5ff;
+        color: #04c181;
+    }
+    
+    header .hea_l .nav_head nav>a>.iconfont {
+        color: #04c181;
     }
     
     header .hea_l .nav_head .search_btn {
         flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border-radius: 18px;
+    }
+    
+    header .hea_l .nav_head .search_btn>.iconfont {
+        font-size: 20px;
+        color: #333;
+    }
+    
+    header .hea_l .nav_head .search_btn:hover {
+        background-color: #f1f5ff;
     }
     
     /* Box Main Layout Mobile Fixes (for category pages like RPG-games.html) */
