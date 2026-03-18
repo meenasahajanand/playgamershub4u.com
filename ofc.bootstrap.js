@@ -258,9 +258,9 @@ function getCurrentFloorIndex(floorArray) {
   const tracking = getRequestTracking();
 
   const adSlots = [
-    { adUnit: "/23330730517/playgamerhub4u.com_d1", divId: "myw_top_1" },
-    { adUnit: "/23330730517/playgamerhub4u.com_d2", divId: "myw_top_2" },
-    { adUnit: "/23330730517/playgamerhub4u.com_d3", divId: "myw_top_3" },
+    { adUnit: "/23330730517/playgamershub4u.com_d1", divId: "myw_top_1" },
+    { adUnit: "/23330730517/playgamershub4u.com_d2", divId: "myw_top_2" },
+    { adUnit: "/23330730517/playgamershub4u.com_d3", divId: "myw_top_3" },
   ];
 
   googletag.cmd.push(function () {
@@ -478,7 +478,7 @@ async function executeRewardedAd() {
 
         currentSlot = googletag
           .defineOutOfPageSlot(
-            "/23330730517/playgamerhub4u.com_reward",
+            "/23330730517/playgamershub4u.com_reward",
             googletag.enums.OutOfPageFormat.REWARDED
           )
           .addService(googletag.pubads())

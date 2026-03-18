@@ -2,9 +2,9 @@
   window.googletag = window.googletag || { cmd: [] };
 
   const adSlots = [
-    { adUnit: "/23330730517/playgamerhub4u.com_d1", divId: "myw_top_1", size: [[300, 250], [336, 280], "fluid"] },
-    { adUnit: "/23330730517/playgamerhub4u.com_d2", divId: "myw_top_2", size: [[300, 250], [336, 280], "fluid"] },
-    { adUnit: "/23330730517/playgamerhub4u.com_d3", divId: "myw_top_3", size: [[300, 250], [336, 280], "fluid"] },
+    { adUnit: "/23330730517/playgamershub4u.com_d1", divId: "myw_top_1", size: [[300, 250], [336, 280], "fluid"] },
+    { adUnit: "/23330730517/playgamershub4u.com_d2", divId: "myw_top_2", size: [[300, 250], [336, 280], "fluid"] },
+    { adUnit: "/23330730517/playgamershub4u.com_d3", divId: "myw_top_3", size: [[300, 250], [336, 280], "fluid"] },
   ];
 
   let rewardedSlot = null;
@@ -68,7 +68,7 @@
 
     // Rewarded ad slot — no .then(), just store the slot directly
     rewardedSlot = googletag.defineOutOfPageSlot(
-      "/23330730517/playgamerhub4u.com_reward",
+      "/23330730517/playgamershub4u.com_reward",
       googletag.enums.OutOfPageFormat.REWARDED
     );
 
